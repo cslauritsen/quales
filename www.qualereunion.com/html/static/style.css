@@ -1,0 +1,97 @@
+* {
+  margin 0; padding: 0; border 0;
+  color: #bbb;
+}
+html {
+  font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+}
+
+body {
+	background-color: #252221;
+}
+#header {
+	background-color: #333;
+	width: 100%;
+	height: 8em;
+	text-align: center;
+	vertical-align: middle;
+	font-family: 'Tangerine', serif;
+}
+
+.strokeme
+{
+    color: #bbb;
+    text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+    font-size: 80px;
+	font-weight: bold;
+}
+
+
+#content {
+ width: 100%;
+ height: 600px;
+ padding: 0;
+}
+
+div#content div {
+ display: inline;
+ float: left;
+ margin: 5px 5px 5px 5px;
+ height: 95%;
+}
+
+.sidebar {
+ width: 24%;
+ height: 100%;
+}
+
+#cmid {
+ width: 50%;
+ height: 100%;
+}
+
+.sidebar img {
+	position: relative;
+	top: 150px;
+	left: 180px
+}
+
+h1 {
+	width: 100%;
+}
+
+input, select {
+	background-color: #777;
+	font-family: 'Roboto';
+	font-size: 18px;
+}
+button {
+	font-size: 18px;
+	background-color: #777;
+	font-family: 'Roboto';
+	width: 150px;
+}
+select {
+	width: 100px;
+	height: 1.5em;
+	text-align: right;
+}
+input {
+	width: 30em;
+	height: 1.5em;
+	color: #bbb;
+}
+table {
+	position: relative;
+	left: 50px;
+	top: 200px;
+}
+td {
+	text-align: right;
+	color: #bbb;
+}

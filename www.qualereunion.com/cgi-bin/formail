@@ -1,0 +1,45 @@
+#!/usr/bin/perl
+
+use CGI;
+use CGI::Carp qw(fatalsToBrowser);
+
+my $c = new CGI;
+
+my $firstname = $c->param('firstname');
+my $lsatname = $c->param('lsatname');
+my $email = $c->param('email');
+my $email2 = $c->param('email2');
+my $phone = $c->param('phone');
+my $adults = $c->param('adults');
+my $children = $c->param('children');
+
+my $to = '<csl4jc@gmail.com>';
+my $from = 'Quale Reunion <webmaster@qualereunion.com>';
+
+open(MAIL, '|/usr/lib/sendmail -t') or die "Cannot forward information: $!";
+print MAIL <<E;
+From: $from
+To: $to
+Subject: Quale Reunion RSVP
+
+Dear $firstname,
+
+Thank you for your RSVP. We have recorded the following information. If you have any questions, please contact Velna Hasch at 402-724-2317.
+
+Name:               $firstname $lastname
+Adults Attending:   $adults
+Children Attending: $children
+Daytime Phone:      $phone
+E
+close(MAIL);
+
+print <<E;
+Content-type: text/html
+
+<html>
+<h1>Thank You, $firstname</h1>
+
+Thank you for your RSVP. We have recorded your information. In the meantime, if you have any questions or problems,  please contact Velna Hasch at 402-724-2317.
+</html>
+E
+
